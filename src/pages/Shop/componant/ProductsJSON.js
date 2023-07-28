@@ -1,20 +1,5 @@
-import {
-  spfOne,
-  spfTwo,
-  spfThree,
-  spfFour,
-  bestSellerOne,
-  bestSellerTwo,
-  bestSellerThree,
-  bestSellerFour,
-  newArrOne,
-  newArrTwo,
-  newArrThree,
-  newArrFour,
-} from "../../../assets/images/index";
+import { spfThree,spfFour,bestSellerFour,} from "../../../assets/images/index";
 import { AiFillStar } from "react-icons/ai";
-
-
 const Products = [
   {
     img: "https://m.media-amazon.com/images/I/81MZRUuHJIL._SL1500_.jpg",
