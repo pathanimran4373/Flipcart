@@ -8,6 +8,9 @@ import { useSelector } from "react-redux";
 import { paginationItems } from "../../../jsonFile";
 
 const Header = () => {
+  // for show cart count
+  const products = useSelector((state) => state.orebiReducer.products);
+ 
   // for search bar
   const [searchQuery, setSearchQuery] = useState("");
   const [filteredProducts, setFilteredProducts] = useState([]);
@@ -29,9 +32,7 @@ const [showUser, setShowUser] = useState(false);
     );
     setFilteredProducts(filtered);
   }, [searchQuery]);
-// for show cart count
-  const products = useSelector((state) => state.orebiReducer.products);
- 
+
 
   return (
     <div className="w-full h-20 bg-white sticky top-0 z-50 border-b-[1px] border-b-gray-200">
@@ -107,8 +108,8 @@ const [showUser, setShowUser] = useState(false);
           {/* login and signup */}
           <div className="flex gap-4 mt-2 lg:mt-0 items-center pr-6 cursor-pointer relative">
             <div onClick={() => setShowUser(!showUser)} className="flex">
-              <FaUser className="text-blue-600"/>
-              <FaCaretDown  className="text-blue-600"/>
+              <FaUser className="text-blue-600 hover:text-blue-900"/>
+              <FaCaretDown  className="text-blue-600 hover:text-blue-900"/>
             </div>
             {showUser && (
               <motion.ul
@@ -142,7 +143,7 @@ const [showUser, setShowUser] = useState(false);
             {/* cart section */}
             <Link to="/cart">
               <div className="relative">
-                <FaShoppingCart className="text-blue-600"/>
+                <FaShoppingCart className="text-blue-600 hover:text-blue-900"/>
                 <span className="absolute font-titleFont top-3 -right-2 text-xs w-4 h-4 flex items-center justify-center rounded-full bg-blue-600 text-white">
                   {products.length > 0 ? products.length : 0}
                 </span>

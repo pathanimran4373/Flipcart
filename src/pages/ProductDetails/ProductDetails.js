@@ -27,7 +27,7 @@ const ProductDetails = () => {
           <div className="w-full grid grid-cols-1 md:grid-cols-2 xl:grid-cols-6 gap-4 h-full  xl:-mt-8 py-10 bg-gray-100 p-4">
             {/* product image */}
             <div className="h-full xl:col-span-2">
-              <div className="h-64">
+              <div className="h-74 w-full bg-white p-2">
                 <img
                   className="w-full h-full object-cover"
                   src={productInfo.img}
