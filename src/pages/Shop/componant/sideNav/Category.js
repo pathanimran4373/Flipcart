@@ -19,13 +19,13 @@ const Category = ({ handleChange }) => {
         />
         <Input
           handleChange={handleChange}
-          value="footwear"
-          title="Footwear"
+          value="electronics"
+          title="Electronics"
           name="test"
         />
         <Input
           handleChange={handleChange}
-          value="phone"
+          value="mobile"
           title="Mobile and accessories"
           name="test"
         />
