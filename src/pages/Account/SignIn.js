@@ -37,9 +37,9 @@ const SignIn = () => {
     }
   };
   return (
-    <div className="w-full h-screen flex items-center justify-center">
+    <div className="w-full h-96 flex items-center justify-center">
      
-      <div className="w-full lgl:w-1/2 h-full">
+      <div className="w-full lgl:w-1/2">
         {successMsg ? (
           <div className="w-full lgl:w-[500px] h-full flex flex-col justify-center">
             <p className="w-full px-4 py-10 text-green-500 font-medium font-titleFont">

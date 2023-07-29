@@ -58,7 +58,7 @@ const [showUser, setShowUser] = useState(false);
             />
             {searchQuery && (
               <div
-                className={`w-full mx-auto h-96 bg-white top-16 absolute left-0 z-50 overflow-y-scroll shadow-2xl scrollbar-hide cursor-pointer`}
+                className={`w-full mx-auto h-96 bg-white top-16 absolute left-0 z-50 overflow-y-scroll shadow-2xl cursor-pointer`}
               >
                 {searchQuery &&
                   filteredProducts.map((item) => (

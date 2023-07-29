@@ -1,14 +1,5 @@
 import React, { useState } from "react";
-// import { Link } from "react-router-dom";
 import Slider from "react-slick";
-// import { carousalItem } from "../../jsonFile";
-import {
-  bannerImgOne,
-  bannerImgTwo,
-  bannerImgThree,
-} from "../../assets/images";
-// import Image from "../designLayouts/Image";
-
 const Banner = () => {
   const [dotActive, setDocActive] = useState(0);
   const settings = {
@@ -105,21 +96,12 @@ const Banner = () => {
   return (
     <div className="w-full bg-white">
       <Slider {...settings}>
-        {/* <Link to="/product" style={{hight:"25px",backgroundColor:"blue"}}>
-          {
-            carousalItem.map((e) => {
-              return (
-                <div key={e._id} style={{backgroundColor:"blue"}}>
-                  <img style={{hight:"40px"}} src={e.image} alt="product" />
 
-                </div>
-              )
-            })
-          }
-        </Link> */}
-<div><img style={{hight:"25px",backgroundColor:"blue",objectFit:"cover"}} src="https://images-eu.ssl-images-amazon.com/images/G/31/img21/Wireless/Shreyansh/BAU/Unrexc/D70978891_INWLD_BAU_Unrec_Uber_PC_Hero_3000x1200._CB594707876_.jpg" alt="product"/></div>
-<div><img style={{hight:"25px",backgroundColor:"blue",objectFit:"cover"}} src="https://images-eu.ssl-images-amazon.com/images/G/31/img21/Wireless/Shreyansh/BAU/Unrexc/D70978891_INWLD_BAU_Unrec_Uber_PC_Hero_3000x1200._CB594707876_.jpg" alt="product"/></div>
-<div><img style={{hight:"25px",backgroundColor:"blue",objectFit:"cover"}} src="https://images-eu.ssl-images-amazon.com/images/G/31/img21/Wireless/Shreyansh/BAU/Unrexc/D70978891_INWLD_BAU_Unrec_Uber_PC_Hero_3000x1200._CB594707876_.jpg" alt="product"/></div>
+      {/* <img style="width: 100%; margin: auto; display: block; position: absolute; inset: 0px; padding: inherit; object-fit: cover; opacity: 0; aspect-ratio: 211 / 35;" src="https://rukminim1.flixcart.com/fk-p-flap/480/80/image/440d280fc5515e1c.png?q=20" loading="auto" alt="Image"></img> */}
+
+        <div><img style={{ hight: "100%",width:"100%", backgroundColor: "blue", objectFit: "cover" }} src="https://rukminim1.flixcart.com/fk-p-flap/2000/300/image/3959ad9f670aeeeb.jpg?q=20" alt="banner" /></div>
+        <div><img style={{ hight: "100%",width:"100%", backgroundColor: "blue", objectFit: "cover" }} src="https://rukminim1.flixcart.com/fk-p-flap/2000/300/image/81518fdc857c741b.png?q=20" alt="product" /></div>
+        <div><img style={{ hight: "100%",width:"100%", backgroundColor: "blue", objectFit: "cover" }} src="https://rukminim1.flixcart.com/fk-p-flap/2000/300/image/440d280fc5515e1c.png?q=20" alt="product" /></div>
       </Slider>
     </div>
   );

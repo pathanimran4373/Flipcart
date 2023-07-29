@@ -100,7 +100,7 @@ const SignUp = () => {
     }
   };
   return (
-    <div className="w-full h-screen flex items-center my-10 ml-20 justify-start">
+    <div className="w-full h-screen flex items-center my-10 justify-center">
       <div className="w-full lgl:w-[500px] h-full flex flex-col justify-center">
         {successMsg ? (
           <div className="w-[500px]">
