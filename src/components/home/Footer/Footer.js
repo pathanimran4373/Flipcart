@@ -2,7 +2,7 @@ import React, { useState } from "react";
 import { motion } from "framer-motion";
 import { FaFacebook, FaYoutube, FaLinkedin, FaGithub } from "react-icons/fa";
 import FooterListTitle from "./FooterListTitle";
-import { paymentCard } from "../../../assets/images";
+import paymentCardImg from "../../../assets/images/payment.png"
 import Image from "../../designLayouts/Image";
 
 const Footer = () => {
@@ -141,7 +141,7 @@ const Footer = () => {
               className={`w-[80%] lg:w-[60%] mx-auto ${
                 subscription ? "mt-2" : "mt-6"
               }`}
-              imgSrc={paymentCard}
+              imgSrc={paymentCardImg}
             />
           </div>
         </div>

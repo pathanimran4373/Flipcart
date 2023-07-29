@@ -4,7 +4,8 @@ import { Link } from "react-router-dom";
 import { motion } from "framer-motion";
 import Breadcrumbs from "../../components/pageProps/Breadcrumbs";
 import { resetCart } from "../../redux/orebiSlice";
-import { emptyCart } from "../../assets/images/index";
+// import { emptyCart } from "../../assets/images/index";
+import EmptyCartImg from "../../assets/images/emptyCart.png"
 import ItemCard from "./ItemCard";
 
 const Cart = () => {
@@ -114,7 +115,7 @@ const Cart = () => {
                 <div>
                   <img
                     className="w-80 rounded-lg p-4 mx-auto"
-                    src={emptyCart}
+                    src={EmptyCartImg}
                     alt="emptyCart"
                   />
                 </div>

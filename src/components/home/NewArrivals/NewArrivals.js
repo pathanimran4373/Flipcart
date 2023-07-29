@@ -43,7 +43,7 @@ const NewArrivals = () => {
   };
   return (
     <div className="w-11/12 mx-auto pb-5 my-10 px-5 shadow-lg">
-      <Heading heading="New Arrivals" />
+      <Heading heading="New Products" />
       <Slider {...settings}>
         {
           newArrivals.map((e) => {

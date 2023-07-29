@@ -1,4 +1,3 @@
-import { spfThree,spfFour,bestSellerFour,} from "../../../assets/images/index";
 import { AiFillStar } from "react-icons/ai";
 const Products = [
   {
@@ -242,16 +241,6 @@ const Products = [
     des: "Lorem ipsum dolor sit amet consectetur adipisicing elit. Hic excepturi quibusdam odio deleniti reprehenderit facilis.",
   },
   {
-    _id: 1022,
-    img: spfFour,
-    productName: "Sun glasses",
-    star: <AiFillStar className="rating-star" />,
-    price: "220.00",
-    color: "Black",
-    badge: true,
-    des: "Lorem ipsum dolor sit amet consectetur adipisicing elit. Hic excepturi quibusdam odio deleniti reprehenderit facilis.",
-  },
-  {
     _id: 1023,
     img: "https://m.media-amazon.com/images/I/81MZRUuHJIL._SL1500_.jpg",
     productName: "Mobile realme-s11",
@@ -290,16 +279,7 @@ const Products = [
     badge: true,
     des: "Lorem ipsum dolor sit amet consectetur adipisicing elit. Hic excepturi quibusdam odio deleniti reprehenderit facilis.",
   },
-  {
-    _id: 1026,
-    img: spfThree,
-    productName: "Headphones",
-    price: "25.00",
-    color: "Mixed",
-    category: "mobile",
-    badge: true,
-    des: "Lorem ipsum dolor sit amet consectetur adipisicing elit. Hic excepturi quibusdam odio deleniti reprehenderit facilis.",
-  },
+ 
   {
     _id: 1027,
     img: "https://m.media-amazon.com/images/I/81bKgIkCjHL._SL1500_.jpg",
@@ -323,16 +303,6 @@ const Products = [
     color: "Mixed",
     category: "electronics",
     badge: true,
-    des: "Lorem ipsum dolor sit amet consectetur adipisicing elit. Hic excepturi quibusdam odio deleniti reprehenderit facilis.",
-  },
-  {
-    _id: 1031,
-    img: bestSellerFour,
-    productName: "Travel Bag",
-    price: "220.00",
-    color: "Black",
-    category: "other",
-    badge: false,
     des: "Lorem ipsum dolor sit amet consectetur adipisicing elit. Hic excepturi quibusdam odio deleniti reprehenderit facilis.",
   },
 
