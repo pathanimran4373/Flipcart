@@ -8,7 +8,7 @@ const Category = ({ handleChange }) => {
 
       <div className="flex flex-col">
         <label className="my-5 flex items-center justify-start">
-          <input class="form-radio w-5 h-5 border-2 rounded-full bg-red-500" onChange={handleChange} type="radio" value="" name="test" />
+          <input class="form-radio w-5 h-5 border-2 outline-none rounded-full bg-red-500" onChange={handleChange} type="radio" value="" name="test" />
           <h2 className="ml-4 text-blue-600 hover:text-blue-900">All</h2>
         </label>
         <Input

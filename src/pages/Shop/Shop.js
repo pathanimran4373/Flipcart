@@ -74,20 +74,21 @@ const Shop = () => {
 
   return (
     <div className="max-w-container mx-auto px-4">
-      <Breadcrumbs/>
+      <Breadcrumbs />
       <div className="w-full h-full flex pb-20 gap-10">
         <div className="w-[20%] lgl:w-[25%] hidden mdl:inline-flex h-full">
-          <div className="w-full flex flex-col gap-6">
-            <ShopSideNav handleChange={handleChange} handleClick={handleClick}/>
+          <div className="w-full flex shadow p-4 flex-col gap-6">
+            <SearchItem query={query} handleInputChange={handleInputChange} />
+
+            <ShopSideNav handleChange={handleChange} handleClick={handleClick} />
 
           </div>
         </div>
         <div className="w-full mdl:w-[80%] lgl:w-[75%] h-full flex flex-col gap-10">
-        <SearchItem query={query} handleInputChange={handleInputChange} />
 
           {/* <ProductBanner /> */}
           <div className="flex flex-row flex-wrap justify-start w-full h-100% gap-10">
-          <Card result={result} />
+            <Card result={result} />
           </div>
 
 
