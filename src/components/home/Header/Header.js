@@ -99,6 +99,7 @@ const [showUser, setShowUser] = useState(false);
               </div>
             )}
           </div>
+          {/* search bar end */}
           <div className="flex flex-row justify-center items-center ">
             <FaStoreAlt className="text-lg text-blue-600"/>
             <h1 className="px-5 text-lg text-blue-600">Become a Seller</h1>
