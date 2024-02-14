@@ -1,21 +1,25 @@
 import React, { useState } from "react";
 import { motion } from "framer-motion";
+// react icons
 import { FaFacebook, FaYoutube, FaLinkedin, FaGithub } from "react-icons/fa";
+// title component
 import FooterListTitle from "./FooterListTitle";
-import paymentCardImg from "../../../assets/images/payment.png"
-import Image from "../../designLayouts/Image";
+// payment card image
+import paymentCardImg from "../../assets/images/payment.png";
 
 const Footer = () => {
   const [emailInfo, setEmailInfo] = useState("");
   const [subscription, setSubscription] = useState(false);
   const [errMsg, setErrMsg] = useState("");
 
+  // email validation function
   const emailValidation = () => {
     return String(emailInfo)
       .toLocaleLowerCase()
       .match(/^\w+([-]?\w+)*@\w+([-]?\w+)*(\.\w{2,3})+$/);
   };
 
+  // handle subscription function
   const handleSubscription = () => {
     if (emailInfo === "") {
       setErrMsg("Please provide an Email !");
@@ -27,6 +31,7 @@ const Footer = () => {
       setEmailInfo("");
     }
   };
+
   return (
     <div className="w-full bg-black text-white py-20">
       <div className="max-w-container mx-auto grid grid-cols-1 md:grid-cols-2  xl:grid-cols-6 px-4 gap-10">
@@ -38,25 +43,25 @@ const Footer = () => {
               ab ullam, numquam nesciunt in.
             </p>
             <ul className="flex items-center gap-2">
-             
-                <li className="w-7 h-7 bg-primeColor text-gray-100 hover:text-white cursor-pointer text-lg rounded-full flex justify-center items-center hover:bg-black duration-300">
-                  <FaYoutube />
-                </li>
-             
-                <li className="w-7 h-7 bg-primeColor text-gray-100 hover:text-white cursor-pointer text-lg rounded-full flex justify-center items-center hover:bg-black duration-300">
-                  <FaGithub />
-                </li>
-             
-                <li className="w-7 h-7 bg-primeColor text-gray-100 hover:text-white cursor-pointer text-lg rounded-full flex justify-center items-center hover:bg-black duration-300">
-                  <FaFacebook />
-                </li>
-             
-                <li className="w-7 h-7 bg-primeColor text-gray-100 hover:text-white cursor-pointer text-lg rounded-full flex justify-center items-center hover:bg-black duration-300">
-                  <FaLinkedin />
-                </li>
+              <li className="w-7 h-7 bg-primeColor text-gray-100 hover:text-white cursor-pointer text-lg rounded-full flex justify-center items-center hover:bg-black duration-300">
+                <FaYoutube />
+              </li>
+
+              <li className="w-7 h-7 bg-primeColor text-gray-100 hover:text-white cursor-pointer text-lg rounded-full flex justify-center items-center hover:bg-black duration-300">
+                <FaGithub />
+              </li>
+
+              <li className="w-7 h-7 bg-primeColor text-gray-100 hover:text-white cursor-pointer text-lg rounded-full flex justify-center items-center hover:bg-black duration-300">
+                <FaFacebook />
+              </li>
+
+              <li className="w-7 h-7 bg-primeColor text-gray-100 hover:text-white cursor-pointer text-lg rounded-full flex justify-center items-center hover:bg-black duration-300">
+                <FaLinkedin />
+              </li>
             </ul>
           </div>
         </div>
+
         <div>
           <FooterListTitle title="Shop" />
           <ul className="flex flex-col gap-2">
@@ -77,6 +82,7 @@ const Footer = () => {
             </li>
           </ul>
         </div>
+
         <div>
           <FooterListTitle title="Your account" />
           <ul className="flex flex-col gap-2">
@@ -97,12 +103,10 @@ const Footer = () => {
             </li>
           </ul>
         </div>
+
         <div className="col-span-2 flex flex-col items-center w-full px-4">
-          <FooterListTitle title="Subscribe to our newsletter." />
+          <FooterListTitle title=" Subscribe Yourself ." />
           <div className="w-full">
-            <p className="text-center mb-4">
-              A at pellentesque et mattis porta enim elementum.
-            </p>
             {subscription ? (
               <motion.p
                 initial={{ x: 20, opacity: 0 }}
@@ -118,7 +122,7 @@ const Footer = () => {
                   <input
                     onChange={(e) => setEmailInfo(e.target.value)}
                     value={emailInfo}
-                    className="w-full h-12 border-b border-gray-400 bg-transparent px-4 text-primeColor text-lg placeholder:text-base outline-none"
+                    className="w-full h-12 border-b border-gray-400 bg-transparent px-4 text-white text-lg placeholder:text-base outline-none"
                     type="text"
                     placeholder="Insert your email ...*"
                   />
@@ -130,18 +134,19 @@ const Footer = () => {
                 </div>
                 <button
                   onClick={handleSubscription}
-                  className="bg-white text-lightText w-[30%] h-10 hover:bg-black hover:text-white duration-300 text-base tracking-wide"
+                  className="bg-white text-black rounded w-[30%] h-10 hover:bg-blue-600 hover:text-white duration-300 text-base tracking-wide"
                 >
                   Subscribe
                 </button>
               </div>
             )}
 
-            <Image
-              className={`w-[80%] lg:w-[60%] mx-auto ${
-                subscription ? "mt-2" : "mt-6"
-              }`}
-              imgSrc={paymentCardImg}
+            {/* visa and debit card images */}
+            <img
+              className="w-full"
+              src={paymentCardImg}
+              alt="Paypal"
+              loading="lazy"
             />
           </div>
         </div>

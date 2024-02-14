@@ -1,15 +1,16 @@
 import React from "react";
-import { FaLongArrowAltLeft } from "react-icons/fa";
+import { FaAngleLeft } from "react-icons/fa";
 
 const SamplePrevArrow = (props) => {
   const { onClick } = props;
   return (
     <div
-      className="w-14 h-14 rounded-full text-white bg-black bg-opacity-40 hover:bg-opacity-100 duration-300 cursor-pointer flex justify-center items-center absolute z-10 top-[35%] left-2"
+      className="w-11 h-20 rounded text-black bg-white cursor-pointer flex justify-center items-center absolute z-10 top-[35%] left-0 shadow-lg
+      "
       onClick={onClick}
     >
       <span>
-        <FaLongArrowAltLeft />
+        <FaAngleLeft />
       </span>
     </div>
   );

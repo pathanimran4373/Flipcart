@@ -1,20 +1,28 @@
-import React from "react";
-import Banner from "../../components/Banner/Banner";
-import BestSellers from "../../components/home/BestSellers/BestSellers";
-import NewArrivals from "../../components/home/NewArrivals/NewArrivals";
-import SpecialOffers from "../../components/home/SpecialOffers/SpecialOffers";
-import YearProduct from "../../components/home/YearProduct/YearProduct";
-import Footer from "../../components/home/Footer/Footer"
+// slider banner
+import Banner from "../../components/Banner";
+// home components
+import {
+  NewArrivals,
+  BestSellers,
+  YearProduct,
+  SpecialOffers,
+} from "../../components/home/index";
+import NavbarBottom from "../../components/header/navbarBottom";
+import Footer from "../../components/footer";
+
 const Home = () => {
   return (
+    <>
     <div className="w-full mx-auto">
+      <NavbarBottom />
       <Banner />
       <NewArrivals />
       <BestSellers />
       <YearProduct />
       <SpecialOffers />
-      <Footer/>
+      <Footer />
     </div>
+    </>
   );
 };
 

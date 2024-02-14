@@ -3,6 +3,7 @@ import { Link } from "react-router-dom";
 
 const Payment = () => {
   return (
+   <>
     <div className="w-full h-64 flex justify-center items-center">
       <div className="pb-10">
         <p className="text-xl font-medium">Your cart is Successfull !.</p>
@@ -13,6 +14,7 @@ const Payment = () => {
         </Link>
       </div>
     </div>
+   </>
   );
 };
 
