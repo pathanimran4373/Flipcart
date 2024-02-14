@@ -11,7 +11,7 @@ import UserLogin from "./Userlogin";
 
 const Header = () => {
   // state of cart count
-  const products = useSelector((state) => state.orebiReducer.products);
+  const products = useSelector((state) => state.FlipcartReducer.products);
 
   return (
     <>

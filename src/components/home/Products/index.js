@@ -8,7 +8,7 @@ import LoadingSpinner from "../../loadingSpiner";
 const Product = (props) => {
   const [loading, setLoading] = useState(false);
 
-  const _id = props.productName;
+  const _id = props.name;
 
   const idString = (_id) => {
     return String(_id).toLowerCase().split(" ").join("");
