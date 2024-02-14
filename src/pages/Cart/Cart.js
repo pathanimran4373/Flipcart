@@ -12,7 +12,7 @@ import ItemCard from "./ItemCard";
 
 const Cart = () => {
   const dispatch = useDispatch();
-  const products = useSelector((state) => state.orebiReducer.products);
+  const products = useSelector((state) => state.FlipcartReducer.products);
 
   // State to hold total amount and shipping charge
   const [totalAmt, setTotalAmt] = useState("");
@@ -95,27 +95,27 @@ const Cart = () => {
                 </h1>
                 {/* Total Amount, Shipping Charge, and Total */}
                 <div>
-                  <p className="flex items-center justify-between border-[1px] border-gray-400 border-b-0 py-1.5 text-lg px-4 font-medium">
+                  <div className="flex items-center justify-between border-[1px] border-gray-400 border-b-0 py-1.5 text-lg px-4 font-medium">
                     Subtotal
-                    <span className="flex flex-row items-center justify-around font-semibold tracking-wide font-titleFont">
+                    <div className="flex flex-row items-center justify-around font-semibold tracking-wide font-titleFont">
                       <FaRupeeSign />
                       <p>{totalAmt}</p>
-                    </span>
-                  </p>
-                  <p className="flex items-center justify-between border-[1px] border-gray-400 border-b-0 py-1.5 text-lg px-4 font-medium">
+                    </div>
+                  </div>
+                  <div className="flex items-center justify-between border-[1px] border-gray-400 border-b-0 py-1.5 text-lg px-4 font-medium">
                     Shipping Charge
-                    <span className="flex flex-row items-center justify-around font-semibold tracking-wide font-titleFont">
+                    <div className="flex flex-row items-center justify-around font-semibold tracking-wide font-titleFont">
                       <FaRupeeSign />
                       <p>{shippingCharge}</p>
-                    </span>
-                  </p>
-                  <p className="flex items-center justify-between border-[1px] border-gray-400 py-1.5 text-lg px-4 font-medium">
+                    </div>
+                  </div>
+                  <div className="flex items-center justify-between border-[1px] border-gray-400 py-1.5 text-lg px-4 font-medium">
                     Total Amount
-                    <span className="flex flex-row items-center justify-around font-bold tracking-wide text-lg font-titleFont">
+                    <div className="flex flex-row items-center justify-around font-bold tracking-wide text-lg font-titleFont">
                       <FaRupeeSign />
                       <p>{totalAmt + shippingCharge}</p>
-                    </span>
-                  </p>
+                    </div>
+                  </div>
                 </div>
                 {/* Proceed to Checkout Button */}
                 <div className="flex justify-end">

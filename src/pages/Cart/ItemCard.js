@@ -65,7 +65,7 @@ const ItemCard = ({ item }) => {
           </div>
         </div>
       </div>
-      <hr class="border-t border-gray-300 h-2" />
+      <hr className="border-t border-gray-300 h-2" />
     </>
   );
 };
