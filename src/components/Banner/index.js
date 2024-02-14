@@ -114,7 +114,7 @@ const settings = {
             }}
             src={slider3}
             alt="banner"
-            loading="lazy"
+            loading="eager"
           />
         </div>
         <div>
@@ -127,7 +127,7 @@ const settings = {
             }}
             src={slider1}
             alt="product"
-            loading="lazy"
+            loading="eager"
           />
         </div>
         <div>
@@ -140,7 +140,7 @@ const settings = {
             }}
             src={slider2}
             alt="product"
-            loading="lazy"
+            loading="eager"
           />
         </div>
       </Slider>
