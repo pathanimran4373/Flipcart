@@ -72,7 +72,7 @@ const NewArrivals = () => {
               className="absolute inset-0 w-full h-full object-cover"
               src="https://rukminim1.flixcart.com/fk-p-flap/470/720/image/fc822dc700322fcd.jpg?q=20"
               alt="image"
-              loading="lazy"
+              loading="eager"
             />
           </div>
         </div>

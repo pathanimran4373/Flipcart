@@ -11,7 +11,7 @@ const NavBottom = () => {
               src={item.image}
               alt={item.name}
               className="w-12 h-12"
-              loading="eger"
+              loading="eager"
             />
             <p>{item.name}</p>
           </Link>

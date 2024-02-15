@@ -32,21 +32,21 @@ const ProductDetails = () => {
       <div className="w-full md:mt-[55px]">
         <div className="md:w-11/12 mx-auto bg-white shadow-lg px-4">
           <div className="xl:-mt-10 -mt-7">
-            <Breadcrumbs title="" prevLocation={prevLocation} />
+            <Breadcrumbs title={productInfo.name} prevLocation={prevLocation} />
           </div>
           {/* Product details section */}
-          <div className="w-full grid grid-cols-1 md:grid-cols-2 xl:grid-cols-6 gap-4 h-full  xl:-mt-8 py-10 p-4">
-            {/* Product image */}
-            <div className="shadow-lg xl:col-span-2">
-              <div className="w-full bg-white p-2">
-                <img
-                  className="w-full md:h-72 object-cover"
-                  src={productInfo.img}
-                  alt={productInfo.img}
-                />
-              </div>
+          <div className="w-full md:flex-row justify-center items-center flex-col py-10 px-4">
+            {/* image and buutton container */}
+            <div className="shadow-lg">
+              {/* Product image */}
+              <img
+                className="md:w-80 md:h-72 object-cover bg-blue-600"
+                // src={productInfo.img}
+                alt={productInfo.img}
+              />
+              {/* Button to add product to cart */}
+
               <div className="flex flex-row items-center justify-center">
-                {/* Button to add product to cart */}
                 <Link to="/cart">
                   <button
                     onClick={() =>
@@ -77,7 +77,7 @@ const ProductDetails = () => {
               </div>
             </div>
             {/* Product details */}
-            <div className="h-full w-full md:col-span-2 xl:col-span-3 xl:p-14 flex flex-col gap-6 justify-center">
+            <div className="">
               <ProductInfo productInfo={productInfo} />
             </div>
           </div>

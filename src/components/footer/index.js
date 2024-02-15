@@ -34,8 +34,8 @@ const Footer = () => {
 
   return (
     <div className="w-full bg-black text-white py-20">
-      <div className="max-w-container mx-auto grid grid-cols-1 md:grid-cols-2  xl:grid-cols-6 px-4 gap-10">
-        <div className="col-span-2">
+      <div className="flex md:flex-row md:justify-around md:items-start w-full flex-col items-center justify-center">
+        <div className="md:w-1/4 px-11 md:mt-0 mt-3">
           <FooterListTitle title=" About" />
           <div className="flex flex-col gap-6">
             <p className="text-base w-full xl:w-[80%]">
@@ -62,7 +62,7 @@ const Footer = () => {
           </div>
         </div>
 
-        <div>
+        <div className="md:w-1/4 md:mt-0 mt-3">
           <FooterListTitle title="Shop" />
           <ul className="flex flex-col gap-2">
             <li className="font-titleFont text-base text-lightText hover:text-white hover:underline decoration-[1px] decoration-gray-500 underline-offset-2 cursor-pointer duration-300">
@@ -83,7 +83,7 @@ const Footer = () => {
           </ul>
         </div>
 
-        <div>
+        <div className="md:w-1/4 md:mt-0 mt-3">
           <FooterListTitle title="Your account" />
           <ul className="flex flex-col gap-2">
             <li className="font-titleFont text-base text-lightText hover:text-white hover:underline decoration-[1px] decoration-gray-500 underline-offset-2 cursor-pointer duration-300">
@@ -104,7 +104,7 @@ const Footer = () => {
           </ul>
         </div>
 
-        <div className="col-span-2 flex flex-col items-center w-full px-4">
+        <div className="md:w-1/4 md:mt-0 mt-3">
           <FooterListTitle title=" Subscribe Yourself ." />
           <div className="w-full">
             {subscription ? (
@@ -134,7 +134,7 @@ const Footer = () => {
                 </div>
                 <button
                   onClick={handleSubscription}
-                  className="bg-white text-black rounded w-[30%] h-10 hover:bg-blue-600 hover:text-white duration-300 text-base tracking-wide"
+                  className="bg-blue-600 text-white rounded w-[100px] h-8 hover:bg-blue-900 duration-300 text-small px-1"
                 >
                   Subscribe
                 </button>
@@ -142,12 +142,15 @@ const Footer = () => {
             )}
 
             {/* visa and debit card images */}
+            <div className="mt-2">
             <img
-              className="w-full"
               src={paymentCardImg}
               alt="Paypal"
               loading="lazy"
+              height="20"
+              width="200"
             />
+            </div>
           </div>
         </div>
       </div>

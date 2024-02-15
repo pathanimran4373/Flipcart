@@ -1,25 +1,15 @@
 import React, { useState } from "react";
+// import carousal library
 import Slider from "react-slick";
 
 const Banner = () => {
-  const [dotActive, setDotActive] = useState(0);
+  const [dotActive, setDocActive] = useState(0);
+// image url
+const slider1 = "https://rukminim1.flixcart.com/fk-p-flap/2000/300/image/3959ad9f670aeeeb.jpg?q=20" 
+const slider2 = "https://rukminim1.flixcart.com/fk-p-flap/2000/300/image/81518fdc857c741b.png?q=20" 
+const slider3 = "https://rukminim1.flixcart.com/fk-p-flap/2000/300/image/440d280fc5515e1c.png?q=20" 
 
-  const images = [
-    {
-      src: "https://rukminim1.flixcart.com/fk-p-flap/2000/300/image/3959ad9f670aeeeb.jpg?q=20",
-      alt: "banner",
-    },
-    {
-      src: "https://rukminim1.flixcart.com/fk-p-flap/2000/300/image/81518fdc857c741b.png?q=20",
-      alt: "product",
-    },
-    {
-      src: "https://rukminim1.flixcart.com/fk-p-flap/2000/300/image/440d280fc5515e1c.png?q=20",
-      alt: "product",
-    },
-  ];
-
-  const settings = {
+const settings = {
     className: "",
     dots: false,
     infinite: true,
@@ -29,7 +19,7 @@ const Banner = () => {
     arrows: false,
     adaptiveHeight: true,
     beforeChange: (prev, next) => {
-      setDotActive(next);
+      setDocActive(next);
     },
     appendDots: (dots) => (
       <div
@@ -112,27 +102,49 @@ const Banner = () => {
   };
 
   return (
-    <>
-    <div className="w-11/12 mxauto sm:w-full bg-white">
+    <div className="w-full sm:w-full bg-white">
       <Slider {...settings}>
-        {images.map((image, index) => (
-          <div key={index} className="w-11/12">
-            <img
-              style={{
-                height: "100",
-                width: "603",
-                backgroundColor: "blue",
-                objectFit: "cover",
-              }}
-              src={image.src}
-              alt={image.alt}
-              loading="eager"
-            />
-          </div>
-        ))}
+        <div>
+          <img
+            style={{
+              hight: "100%",
+              width: "100%",
+              backgroundColor: "blue",
+              objectFit: "cover",
+            }}
+            src={slider3}
+            alt="banner"
+            loading="eager"
+          />
+        </div>
+        <div>
+          <img
+            style={{
+              hight: "100%",
+              width: "100%",
+              backgroundColor: "blue",
+              objectFit: "cover",
+            }}
+            src={slider1}
+            alt="product"
+            loading="eager"
+          />
+        </div>
+        <div>
+          <img
+            style={{
+              hight: "100%",
+              width: "100%",
+              backgroundColor: "blue",
+              objectFit: "cover",
+            }}
+            src={slider2}
+            alt="product"
+            loading="eager"
+          />
+        </div>
       </Slider>
     </div>
-    </>
   );
 };
 
