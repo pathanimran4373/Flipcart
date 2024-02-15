@@ -32,7 +32,7 @@ const ProductDetails = () => {
       <div className="w-full h-screen md:p-10">
         <div className="w-11/12 h-full mx-auto mt-11 bg-white shadow-lg px-4">
           <div className="xl:-mt-10 -mt-7">
-            <Breadcrumbs title={productInfo.name} prevLocation={prevLocation} />
+            {/* <Breadcrumbs title={productInfo.productName} prevLocation={prevLocation} /> */}
           </div>
           {/* Product details section */}
           <div className="w-full h-full flex md:flex-row justify-center items-center flex-col  py-10 px-4">
