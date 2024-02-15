@@ -7,7 +7,7 @@ const Image = ({ imgSrc, className, productName }) => {
       src={imgSrc}
       alt={productName}
       loading="lazy"
-      style={{ width: "136px", height: "107px" }}
+      style={{ width: "136px",backgroundColor:"blue", height: "107px" }}
     />
   );
 };

@@ -44,7 +44,7 @@ const Product = (props) => {
               <div className="mx-auto">
                 {/* image component */}
                 <Image
-                  className="w-40 h-35 object-cover object-center overflow-hidden md:mx-auto"
+                  className=" object-cover object-center overflow-hidden md:mx-auto"
                   imgSrc={props.img}
                   productName={props.productName}
                 />

@@ -68,10 +68,12 @@ const ProductDetails = () => {
                     <span className="white-space-wrap">ADD To CART</span>
                   </button>
                 </Link>
-                <button className="flex flex-row items-center justify-center rounded w-40 h-12 bg-orange-600 ml-5 mt-4 hover:bg-blue-900 duration-300 text-white text-lg font-titleFont">
-                <TiTick className="text-white mr-4 "/>
-                  <span>ORDER IT</span>
-                </button>
+                <Link to="/order">
+                  <button className="flex flex-row items-center justify-center rounded w-40 h-12 bg-orange-600 ml-5 mt-4 hover:bg-blue-900 duration-300 text-white text-lg font-titleFont">
+                    <TiTick className="text-white mr-4 " />
+                    <span>ORDER IT</span>
+                  </button>
+                </Link>
               </div>
             </div>
             {/* Product details */}
