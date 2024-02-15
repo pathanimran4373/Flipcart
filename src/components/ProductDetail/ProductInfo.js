@@ -5,7 +5,7 @@ import { FaStar, FaRupeeSign } from "react-icons/fa";
 const ProductInfo = ({ productInfo }) => {
   
   return (
-    <div className="flex flex-col gap-3 justify-center items-start">
+    <div className="flex flex-col gap-3 justify-center items-start md:p-16">
       {/* Product name */}
       <h2 className="text-2xl font-semibold">{productInfo.productName}</h2>
       {/* Product ratings */}

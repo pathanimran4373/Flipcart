@@ -113,17 +113,18 @@ const Banner = () => {
 
   return (
     <>
-    <div className="w-11/12 mxauto sm:w-full bg-white">
+    <div className="w-11/12 mx-auto bg-white">
       <Slider {...settings}>
         {images.map((image, index) => (
           <div key={index} className="w-11/12">
             <img
-              style={{
-                height: "100",
-                width: "603",
-                backgroundColor: "blue",
-                objectFit: "cover",
-              }}
+              // style={{
+              //   height: "100",
+              //   width: "603",
+              //   backgroundColor: "blue",
+              //   objectFit: "cover",
+              // }}
+              className="w-full h-full inset-full aspect-auto object-fill"
               src={image.src}
               alt={image.alt}
               loading="eager"

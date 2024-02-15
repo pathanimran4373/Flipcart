@@ -29,24 +29,27 @@ const ProductDetails = () => {
   return (
     <>
       {/* Container for product details */}
-      <div className="w-full md:mt-[55px]">
-        <div className="md:w-11/12 mx-auto bg-white shadow-lg px-4">
+      <div className="w-full h-screen md:p-10">
+        <div className="w-11/12 h-full mx-auto mt-11 bg-white shadow-lg px-4">
           <div className="xl:-mt-10 -mt-7">
             <Breadcrumbs title={productInfo.name} prevLocation={prevLocation} />
           </div>
           {/* Product details section */}
-          <div className="w-full md:flex-row justify-center items-center flex-col py-10 px-4">
-            {/* image and buutton container */}
-            <div className="shadow-lg">
+          <div className="w-full h-full flex md:flex-row justify-center items-center flex-col  py-10 px-4">
+            {/* image and button container */}
+            <div className="w-full shadow-lg flex flex-col justify-start items-center md:w-5/12 h-full">
               {/* Product image */}
+              <div className="md:h-3/4 md:w-3/4">
               <img
-                className="md:w-80 md:h-72 object-cover bg-blue-600"
-                // src={productInfo.img}
+                className="w-full h-full aspect-auto object-center bg-blue-600"
+                src={productInfo.img}
                 alt={productInfo.img}
               />
+              </div>
+
               {/* Button to add product to cart */}
 
-              <div className="flex flex-row items-center justify-center">
+              <div className="flex md:flex-row items-center justify-center my-3">
                 <Link to="/cart">
                   <button
                     onClick={() =>
@@ -69,7 +72,7 @@ const ProductDetails = () => {
                   </button>
                 </Link>
                 <Link to="/order">
-                  <button className="flex flex-row items-center justify-center rounded w-40 h-12 bg-orange-600 ml-5 mt-4 hover:bg-blue-900 duration-300 text-white text-lg font-titleFont">
+                  <button className="flex flex-row items-center justify-center rounded w-[140px] h-[45px] bg-orange-600 ml-2 mt-4 hover:bg-blue-900 duration-300 text-white text-lg font-titleFont">
                     <TiTick className="text-white mr-4 " />
                     <span>ORDER IT</span>
                   </button>
@@ -77,7 +80,7 @@ const ProductDetails = () => {
               </div>
             </div>
             {/* Product details */}
-            <div className="">
+            <div className="md:w-2/4 h-full w-full md:ml-14  ">
               <ProductInfo productInfo={productInfo} />
             </div>
           </div>
